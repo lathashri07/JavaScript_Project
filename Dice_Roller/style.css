@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(250, 215, 169);
+}
+
+#container {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#diceCount {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+#rollButton {
+    font-size: 1.3rem;
+    padding: 15px 20px;
+    border: none;
+    background-color: rgb(255, 165, 0);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#rollButton:hover {
+    background-color: rgb(255, 140, 0);
+}
+
+#rollButton:active {
+    background-color: rgb(255, 120, 0);
+}
+
+#diceResults {
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
