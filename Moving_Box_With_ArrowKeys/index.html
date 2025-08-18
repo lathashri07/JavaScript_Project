@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+</head>
+<body>
+    <div id="myBox">😃</div>
+     <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 8rem;
+            border-radius: 10px;
+            position: relative; /*box will not move unless its CSS position property is set */
+        }
+     </style>
+
+     <script>
+        const myBox = document.getElementById("myBox");
+const moveAmout = 100; //used to how much the box moves with each key press
+let x = 0;
+let y = 0;
+
+document.addEventListener("keydown", event => {
+    myBox.style.backgroundColor = "red";
+    myBox.textContent = "😮";
+});
+document.addEventListener("keyup", event => {
+    myBox.style.backgroundColor = "lightblue";
+    myBox.textContent = "😃";
+});
+
+//positive values move the box down/right, negative values move it up/left
+document.addEventListener("keydown", event => {
+    if(event.key.startsWith("Arrow")) {
+        event.preventDefault(); // Prevent default arrow key behavior (scrolling)
+        switch(event.key) {
+            case "ArrowUp":
+                y -= moveAmout;
+                break;
+            case "ArrowDown":
+                y += moveAmout;
+                break;
+            case "ArrowLeft":
+                x -= moveAmout;
+                break;
+            case "ArrowRight":
+                x += moveAmout;
+                break;
+        }
+        myBox.style.top = `${y}px`; // Set the vertical position
+        myBox.style.left = `${x}px`; // Set the horizontal position
+    }
+});
+     </script>
+    
+</body>
+</html>
