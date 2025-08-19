@@ -1,4 +1,4 @@
-##JavaScript Project Showcase: 
+## JavaScript Project Showcase: 
 
 Welcome to my personal collection of creative and beginner-friendly **JavaScript mini projects**!  
 This repository is a hands-on journey through the fundamentals of **HTML**, **CSS**, and **JavaScript**, built to strengthen logic, interactivity, and front-end development skills.
